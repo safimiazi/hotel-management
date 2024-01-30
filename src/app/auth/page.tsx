@@ -15,8 +15,9 @@ const Auth = () => {
                         <FcGoogle className="ml-3 text-4xl cursor-pointer" />
                     </span>
                 </div>
-                <form>
-                    
+                <form className="space-y-4 md:space-y-6">
+                    <input type="email" />
+
                 </form>
             </div>
         </section>
