@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <main>
+        <main className="font-normal">
           {/* ?Header */}
           {children}
           {/* ?Footer */}
