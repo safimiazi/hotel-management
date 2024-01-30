@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-
+const defaultFormData = {
+    email: '',
+    name: '',
+    password: '',
+}
 const Auth = () => {
+    const [formData, setFormData] = useState(defaultFormData)
+    const handleInputChange = (e) => {
+        // Tomorrow i completing my work
+        console.log(e);
+    }
     const inputStyles = 'border border-gray-300 sm:text-sm text-black rounded-lg block  w-full p-2.5 focus:outline-none';
     return (
         <section className="container mx-auto">
@@ -17,9 +27,12 @@ const Auth = () => {
                     </span>
                 </div>
                 <form className="space-y-4 md:space-y-6">
-                    <input type="email" className={inputStyles}  name="email" id="email" placeholder="name@company.com" required/>
-
+                    <input type="text" className={inputStyles} onChange={handleInputChange} value={formData.name} name="name" id="name" placeholder="Type Your Name" required />
+                    <input type="email" className={inputStyles} onChange={handleInputChange}  value={formData.email} name="email" id="email" placeholder="name@company.com" required />
+                    <input type="password" className={inputStyles} onChange={handleInputChange}  value={formData.password} minLength={6} name="password" id="password" placeholder="Type Your Password" required />
+                <button type="submit" className="w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 text-center py-2.5">Sign Up</button>
                 </form>
+                <button className="text-blue-700 underline">login</button>
             </div>
         </section>
     );
