@@ -2,6 +2,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
 const Auth = () => {
+    const inputStyles = 'border border-gray-300 sm:text-sm text-black rounded-lg block  w-full p-2.5 focus:outline-none';
     return (
         <section className="container mx-auto">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70%] mx-auto">
@@ -16,7 +17,7 @@ const Auth = () => {
                     </span>
                 </div>
                 <form className="space-y-4 md:space-y-6">
-                    <input type="email" />
+                    <input type="email" className={inputStyles}  name="email" id="email" placeholder="name@company.com" required/>
 
                 </form>
             </div>
